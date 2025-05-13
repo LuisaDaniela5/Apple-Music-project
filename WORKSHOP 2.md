@@ -213,6 +213,7 @@ Here, in addition to creating new CRC cards, more responsibilities and collabora
 # 7 UML CLASS DIAGRAM.
 
 
+![HOLA](https://github.com/user-attachments/assets/e4c57771-c94e-40dc-ad0d-cb3b2cdef74d)
 
 
 
