@@ -17,9 +17,11 @@ _ENG. Carlos Andres Sierra Virgüez._
 
 # 1. PROJECT DEFINITION
 
-**1.1 Project Name: Apple Music.**
+### 1.1 Project Name: 
+Apple Music.
 
-**1.2 Description:** This project will be a small version of a music playback application, applying the principles of object-oriented programming. It will have various functions that allow users to search, play, and manage their favorite music easily. 
+### 1.2 Description:
+This project will be a small version of a music playback application, applying the principles of object-oriented programming. It will have various functions that allow users to search, play, and manage their favorite music easily. 
 
 
 **Main Features:**
@@ -57,7 +59,7 @@ These will be the main features of our project, which will be implemented and ex
 
 # 3. REQUIREMENTS.
 
-**3.1 Funcional Requirements**
+### 3.1 Funcional Requirements
 
 - **User Registration:** The system must allow users to register by providing their name, email address, and password. 
 
@@ -101,7 +103,7 @@ In this “Functional Requirements” section, we decided to implement more spec
 
 
 
-**3.2 Non-Functional Requirements**
+### 3.2 Non-Functional Requirements
 
 1. **Performance:** The application must load music results in under 5 seconds. 
 
@@ -198,11 +200,11 @@ Here, in addition to creating new CRC cards, more responsibilities and collabora
 
 # 6. MOCKUPS.
 
-**6.1 Muckups apple music for mobile devices**
+### 6.1 Muckups apple music for mobile devices
 
 ![Image](https://github.com/user-attachments/assets/d29060fb-3c7c-4c6e-b968-609789718ad5)
 
-**6.2 Muckups apple music for website.**
+### 6.2 Muckups apple music for website.
 
 ![Image](https://github.com/user-attachments/assets/2a27ed62-3a8d-41c5-802a-7ec3fe34797b)
 
@@ -216,7 +218,7 @@ Here, in addition to creating new CRC cards, more responsibilities and collabora
 
 # 8. IMPLEMENTATION PLAN FOR OBJECT-ORIENTED PROGRAMMING CONCEPTS.
 
-**8.1 Encapsulation** 
+### 8.1 Encapsulation
 
 Encapsulation will be implemented through the use of private attributes and public access methods (getters and setters), limiting direct manipulation of internal class data. This technique will be applied particularly in the User class, to protect sensitive information such as the user's password or personal preferences. It will also be used to preserve the integrity of playlists and playback settings, ensuring that data cannot be directly modified in an unsafe manner from other parts of the system. 
 
@@ -224,7 +226,7 @@ Encapsulation will also help hide the internal complexity of certain classes, ex
 
  
 
-**8.2 Inheritance** 
+### 8.2 Inheritance 
 
 Inheritance will be used to model object hierarchies with common behaviors. For example, you could define a User base class with general attributes and methods, from which classes such as PremiumUser or GuestUser inherit, extending or restricting functionality based on the account type. 
 
@@ -232,7 +234,7 @@ This approach will facilitate code reuse and allow you to adapt specific functio
 
  
 
-**8.3 Polymorphism**
+### 8.3 Polymorphism
 
 Polymorphism will be applied primarily through method overriding in classes that share the same interface or base class. This will be reflected in methods such as play(), which can be defined differently in classes such as Song, PlayList, or PlayHistory. 
 
@@ -242,7 +244,7 @@ This principle will be essential for implementing advanced features such as cust
 
  
 
-**8.4 Preliminary Code Organization**
+### 8.4 Preliminary Code Organization
 
 A package or module structure is proposed, organized according to the functional responsibilities of each system component: 
 
