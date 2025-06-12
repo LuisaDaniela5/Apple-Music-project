@@ -327,4 +327,50 @@ A package or module structure is proposed, organized according to the functional
 
 - utilities/: auxiliary classes or shared tools (validations, formats, etc.). 
 
-- This organization will encourage modular development, ease of testing, and future scalability of the project. 
+- This organization will encourage modular development, ease of testing, and future scalability of the project.
+
+
+# 9. Implementation of SOLID Principles
+
+### 9.1 Single Responsibility Principle:
+
+**Definition**: A class should do one thing, and therefore, it should have only one reason to change.
+
+**Implementation**: We aim to apply this principle by identifying specific responsibilities and creating a class for each one, ensuring that each class has a single, well-defined responsibility. For example:
+
+* **UserManager**: Responsible exclusively for user registration, authentication, and information updates.
+* **PlaylistManager**: Handles only the logic related to creating, editing, and deleting playlists.
+* **Player**: Responsible for playing songs and managing playback modes such as shuffle.
+
+This clear separation of responsibilities improves code organization and makes long-term maintenance easier.
+
+
+### 9.2 Open/Closed Principle:
+
+**Definition**: A class should be open for extension but closed for modification.
+
+**Implementation**: System classes will be designed so they can be extended without needing to be modified. For example, the recommendation feature will be implemented through a **Recommender** interface, allowing different recommendation algorithms to be added without altering the main application logic. This will make it possible to incorporate new recommendation methods (based on preferences, recent behavior, popularity, etc.) without modifying existing classes. Thus, the system remains open to extension but closed to modification.
+
+
+### 9.3 Liskov Substitution Principle:
+
+**Definition**: Subclasses must be able to replace their superclasses without altering the system's behavior.
+
+**Implementation**: This will be ensured by properly organizing class hierarchies, avoiding that subclasses remove expected functionalities or change predefined contracts.
+
+This is especially relevant for user types. For example, in the user hierarchy, the **PremiumUser** and **GuestUser** classes extend a base **User** class. Each implements the methods defined by the base class, adapted to their own constraints. Therefore, any component that uses the **User** class can interact with any of its subtypes without needing to know their internal differences, ensuring consistency in execution.
+
+
+### 9.4 Interface Segregation Principle:
+
+**Definition**: Clients should not be forced to depend on interfaces they do not use.
+
+**Implementation**: The system's interfaces have been split into specific functional subsets to prevent classes from having to implement methods they don't need. For example, search, playback, notifications, and playlist editing functionalities are handled through separate interfaces. This way, a class dedicated to music playback is not forced to implement search or filtering methods, and vice versa. This segmentation promotes code reuse and minimizes coupling between modules.
+
+
+### 9.5 Dependency Inversion Principle:
+
+**Definition**: High-level modules should not depend on low-level modules. Both should depend on abstractions. Also, abstractions should not depend on details. Details should depend on abstractions.
+
+**Implementation**: To apply the Dependency Inversion Principle, all core classes in the system will be designed to depend on interfaces (abstractions) rather than concrete implementations. Low-level components like the player, search system, or song recommender will implement those interfaces. This allows any module to be replaced or updated without affecting the rest of the system, ensuring flexibility, testability, and structural decoupling.
+
