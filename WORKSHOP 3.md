@@ -168,7 +168,7 @@ Five new non-functional requirements were added to ensure the system's internal 
 
  - “As a user, I want an option where others can join my session in real time and suggest songs.” 
 
-## NEW USER STORIES:
+### NEW USER STORIES:
  
 - "As a user, I want to receive notifications with personalized music recommendations based on my listening habits, so I can discover songs I haven't heard yet."
 **Implementation**: The Dependency Inversion Principle (DIP) will be applied by separating the history analysis logic from the presentation component. The recommendation module will be defined through an interface to allow the integration of different future algorithms.
@@ -187,9 +187,10 @@ Five new non-functional requirements were added to ensure the system's internal 
 |-----------------|--|
 | - Register. | - Playlist. |
 | - Log in. | - Song. |
+| - Manage personal informaton. | - Playback session. |
 | - Create and manage playlist. | - Artist. |
 | - Save favorite songs. | - System of recommendation. |
-| - Play, pause and manage playlist. | - Playback session. |
+| - Complete music preference questionnaire. | - Questionnarie. |
 | - Follow artists and friends. |  |
 
 
@@ -207,13 +208,16 @@ Five new non-functional requirements were added to ensure the system's internal 
 | - Add/remove songs. | - User. |
 | - Play songs in order. | - Song. |
 | - Support collaborations. | - Artist. |
+| - Allow voting on songs. | - CollaborationManager. |
+| - Assign category or folder for organization. | - CategoryManager. |
 
 
 | **Class: Recommendation System** |  |
 |----------------------------------|--|
 | - Analyze user history. | - User. |
 | - Suggest songs or playlists. | - Song. |
-
+| - Generate personalized playlists.. | - Questionnaire. |
+| - Recommend weekly playlists based on listening habits. | - Playback Session. |
 
 
 | **Class: Playback Session** |  |
@@ -223,22 +227,43 @@ Five new non-functional requirements were added to ensure the system's internal 
 | - Control volume, quality, random mode. | - User settings. |
 
 
-| **Class: System of Recommendation** |  |
+| **Class: Questionnaire.** |  |
 |-------------------------------------|--|
-| - Generate automatic playlist. | - User. |
-| - Suggest new artist, albums and songs. | - Song. |
-|  | - Artist. |
-|  | - Playlist. |
+| - Store user's music preferences from registration. | - User. |
+| - Provide data to the Recommendation System. | - REcommendation System. |
 
+
+| **Class: CollaborationManager.** |  |
+|-------------------------------------|--|
+| - Manage collaborative playlists. | - Playlist. |
+| - Handle voting, user suggestions, and real-time participation. | - User. |
+
+
+| **Class: CategoryManager.** |  |
+|-------------------------------------|--|
+| - Group playlists by category or folder. | - User. |
+| - Allow user to rename, create, or remove categories. | - Playlist. |
 
 Here, in addition to creating new CRC cards, more responsibilities and collaborations were implemented, expanding the interaction between classes.  
 
 
 **New CRC cards:**
 
-- "Playing Session" allows the user to control the playback status of a song. 
+Three new classes were added to comply with SOLID principles:
 
-- "Recommendation System" class: we implemented this class to improve playback customization for each user. This class analyzes, generates, and suggests albums, artists, or songs. 
+1. **Questionnaire.**
+
+2. **CollaborationManager.**
+
+3. **CategoryManager.**
+
+-  Each class fulfills a single responsibility (SRP).
+
+- The classes collaborate based on functional needs; no unnecessary connections were added.
+
+- Existing classes were enriched with new responsibilities and connected to their actual dependencies.
+
+- The system remains modular, scalable, and open to extensions without modifying existing code (OCP).
 
 
 # 6. MOCKUPS.
