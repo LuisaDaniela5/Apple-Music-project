@@ -168,12 +168,12 @@ Five new non-functional requirements were added to ensure the system's internal 
 
  - “As a user, I want an option where others can join my session in real time and suggest songs.” 
 
-# NEW USER STORIES:
+## NEW USER STORIES:
  
 - "As a user, I want to receive notifications with personalized music recommendations based on my listening habits, so I can discover songs I haven't heard yet."
 **Implementation**: The Dependency Inversion Principle (DIP) will be applied by separating the history analysis logic from the presentation component. The recommendation module will be defined through an interface to allow the integration of different future algorithms.
 
-"As a user, I want to rate songs with stars or 'likes', so that the system can better understand my preferences."
+- "As a user, I want to rate songs with stars or 'likes', so that the system can better understand my preferences."
 **Implementation**: The Single Responsibility Principle (SRP) will be applied: the class responsible for playback history will not handle ratings. Instead, a dedicated class will be created to manage user preferences and ratings.
 
 - "As a user, I want to see statistics about my activity (number of songs played, most listened genres, total listening time) so I can better understand my musical habits."
