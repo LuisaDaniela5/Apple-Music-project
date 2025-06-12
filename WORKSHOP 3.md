@@ -171,13 +171,13 @@ Five new non-functional requirements were added to ensure the system's internal 
 ### NEW USER STORIES:
  
 - "As a user, I want to receive notifications with personalized music recommendations based on my listening habits, so I can discover songs I haven't heard yet."
-- **Implementation**: The Dependency Inversion Principle (DIP) will be applied by separating the history analysis logic from the presentation component. The recommendation module will be defined through an interface to allow the integration of different future algorithms.
+ **Implementation**: The Dependency Inversion Principle (DIP) will be applied by separating the history analysis logic from the presentation component. The recommendation module will be defined through an interface to allow the integration of different future algorithms.
 
 - "As a user, I want to rate songs with stars or 'likes', so that the system can better understand my preferences."
-- **Implementation**: The Single Responsibility Principle (SRP) will be applied: the class responsible for playback history will not handle ratings. Instead, a dedicated class will be created to manage user preferences and ratings.
+ **Implementation**: The Single Responsibility Principle (SRP) will be applied: the class responsible for playback history will not handle ratings. Instead, a dedicated class will be created to manage user preferences and ratings.
 
 - "As a user, I want to see statistics about my activity (number of songs played, most listened genres, total listening time) so I can better understand my musical habits."
-- **Implementation**: Statistics will be decoupled from the player using interfaces, allowing different types of visualizations or analyses to be implemented without altering the data. This follows both the Dependency Inversion Principle (DIP) and the Open/Closed Principle (OCP).
+ **Implementation**: Statistics will be decoupled from the player using interfaces, allowing different types of visualizations or analyses to be implemented without altering the data. This follows both the Dependency Inversion Principle (DIP) and the Open/Closed Principle (OCP).
 
 
 
