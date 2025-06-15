@@ -279,9 +279,7 @@ Three new classes were added to comply with SOLID principles:
 
 
 # 7 UML CLASS DIAGRAM.
-
-
-![HOLA](https://github.com/user-attachments/assets/e4c57771-c94e-40dc-ad0d-cb3b2cdef74d)
+![new UML](https://github.com/user-attachments/assets/dbeb3a9f-5c3f-4d49-86c9-e782d063e1b8)
 
 
 
